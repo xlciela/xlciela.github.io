@@ -1,0 +1,77 @@
+/* footer 透明 */
+/*
+#footer
+  //background: $light-blue
+*/
+
+/* 侧栏分类卡片隐藏(css part) */
+
+/* #aside_content
+.card-archives
+ul.card-archive-list
+> .card-archive-list-item
+a
+span:first-child,
+#aside_content
+.card-categories
+ul.card-category-list
+> .card-category-list-item
+a
+span:first-child {
+    width: auto;
+    min-width: 50%;
+} */
+
+/* 指定 my custom gallery 样式 */
+/*body {
+	font-family: "Halvetica", "Arial", serif;
+	color: #fff;
+	background-color: #333;
+	margin: 1em 10%;
+} */
+
+/*主题颜色配置 */
+
+ .layout_page {
+	background-color: #bcc5bf;
+}
+
+#nav .menus_items .menus_item .menus_item_child li a {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    width: 100%;
+    color: #fff;
+    background-color: #5c7263;
+    text-shadow: none;
+}
+#nav,  #nav.fixed .toggle-menu {
+	background-color: #5c7263 !important;
+}
+
+#nav.fixed a, #nav.fixed #site-name {
+    color: #ffffff;
+    text-shadow: none;
+}
+
+#recent-posts > .recent-post-item {
+	background: #f2f2ed;
+	opacity: 100% !important ;
+
+}
+
+#aside_content > .card-widget {
+	background: #f2f2ed;
+}
+
+/* post 内部背景 */
+.layout_post > #post {
+	background: #f2f2ed;
+}
+#sidebar {
+	background: #f2f2ed;
+}
+
+/*gallery */
+.layout_page > #page {
+	background: #f2f2ed;
+}

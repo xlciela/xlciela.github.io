@@ -1,0 +1,30 @@
+Class:
+  class_name: 友情链接
+  link_list:
+    1:
+      name: -Candy Cancer- 
+      link: https://co5.me/
+      avatar: https://co5.me/images/avatar.png
+      descr: test
+
+    2:
+      name:
+      link:
+      avatar:
+      descr:
+
+
+class2:
+  class_name: 无效链接
+  link_list:
+    1:
+      name: xxx
+      link: https://xxx.com
+      avatar: https://xxx/xxx/avatar.png (也可以是本地文件)
+      descr: 
+    2:
+      name: xxx
+      link: https://xxx.com
+      avatar: 
+      descr: 
+
