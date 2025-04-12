@@ -1,0 +1,325 @@
+<!DOCTYPE html><html lang="en | zh-CN | zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blender Shortcut Manual | Minamo, School at Water's Edge</title><meta name="description" content="BLENDER 2.8 常用快捷键总结Modeling界面&#x2F;视图&#x2F;图层操作: T: 工具列表 N: 右侧明细     top back front back right left    7 ctrl + 7 1 ctrl + 1 3 ctrl + 3    5: 切换正交&#x2F;透视 [2,4,6,8]: 旋转视图 Shift + 7: 切换至以当前选中激活面的法线方向为视线方向的视图 M: 移动对象"><meta name="keywords" content="Blender,3D Art"><meta name="author" content="lain"><meta name="copyright" content="lain"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon_big.ico"><link rel="canonical" href="http://xlciela.github.io/2020/02/01/blender-shortcuts/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta property="og:type" content="article"><meta property="og:title" content="Blender Shortcut Manual"><meta property="og:url" content="http://xlciela.github.io/2020/02/01/blender-shortcuts/"><meta property="og:site_name" content="Minamo, School at Water's Edge"><meta property="og:description" content="BLENDER 2.8 常用快捷键总结Modeling界面&#x2F;视图&#x2F;图层操作: T: 工具列表 N: 右侧明细     top back front back right left    7 ctrl + 7 1 ctrl + 1 3 ctrl + 3    5: 切换正交&#x2F;透视 [2,4,6,8]: 旋转视图 Shift + 7: 切换至以当前选中激活面的法线方向为视线方向的视图 M: 移动对象"><meta property="og:image" content="https://download.blender.org/branding/blender_logo_socket.png"><meta property="article:published_time" content="2020-02-01T08:15:54.000Z"><meta property="article:modified_time" content="2020-07-14T16:49:43.963Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="prev" title="绘画——综合与分析 | 抽象与具体" href="http://xlciela.github.io/2020/07/09/%E7%BB%98%E7%94%BB%E2%80%94%E2%80%94%E7%BB%BC%E5%90%88%E4%B8%8E%E5%88%86%E6%9E%90%20%20%E6%8A%BD%E8%B1%A1%E4%B8%8E%E5%85%B7%E4%BD%93/"><link rel="next" title="我的年度计划@2019" href="http://xlciela.github.io/2019/01/09/2019-toDO-LIST/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: true,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><link rel="stylesheet" href="/css/mycustom.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">5</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">5</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> HOME</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-image"></i><span> GALLERY</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> TIMELINE</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> TAGS</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> CATEGORIES</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> LIST</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/bangumis/"><i class="fa-fw fas fa-youtube"></i><span> Bangumi</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw far fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> LINK</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> ABOUT</span></a></div></div></div></div><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#BLENDER-2-8-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%80%BB%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text">BLENDER 2.8 常用快捷键总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Modeling"><span class="toc-number">1.1.</span> <span class="toc-text">Modeling</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%95%8C%E9%9D%A2-%E8%A7%86%E5%9B%BE-%E5%9B%BE%E5%B1%82%E6%93%8D%E4%BD%9C"><span class="toc-number">1.2.</span> <span class="toc-text">界面&#x2F;视图&#x2F;图层操作:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E4%BD%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">1.3.</span> <span class="toc-text">物体基本操作:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shading"><span class="toc-number">1.4.</span> <span class="toc-text">Shading</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Camera-setting-amp-Rendering"><span class="toc-number">1.5.</span> <span class="toc-text">Camera setting &amp; Rendering</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sculpting"><span class="toc-number">1.6.</span> <span class="toc-text">Sculpting</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><header class="post-bg" id="page-header" style="background-image: url(https://download.blender.org/branding/blender_logo_socket.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Minamo, School at Water's Edge</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> HOME</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fas fa-image"></i><span> GALLERY</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> TIMELINE</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> TAGS</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> CATEGORIES</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> LIST</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page" href="/bangumis/"><i class="fa-fw fas fa-youtube"></i><span> Bangumi</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw far fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> LINK</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> ABOUT</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">Blender Shortcut Manual</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="Created Feb 01 2020 4:15:54 pm"><i class="far fa-calendar-alt fa-fw"></i> Created Feb 01 2020</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="Updated Jul 15 2020 12:49:43 am"><i class="fas fa-history fa-fw"></i> Updated Jul 15 2020</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fas fa-inbox fa-fw post-meta__icon"></i><a class="post-meta__categories" href="/categories/Study/">Study</a></span></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta__icon"></i><span>Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><hr>
+<h1 id="BLENDER-2-8-常用快捷键总结"><a href="#BLENDER-2-8-常用快捷键总结" class="headerlink" title="BLENDER 2.8 常用快捷键总结"></a>BLENDER 2.8 常用快捷键总结</h1><h2 id="Modeling"><a href="#Modeling" class="headerlink" title="Modeling"></a>Modeling</h2><h2 id="界面-视图-图层操作"><a href="#界面-视图-图层操作" class="headerlink" title="界面/视图/图层操作:"></a><strong>界面/视图/图层操作</strong>:</h2><ul>
+<li><font color=" #dd0000 "><code>T</code></font>: 工具列表</li>
+<li><font color=" #dd0000 "><code>N</code></font>: 右侧明细</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">top</th>
+<th align="center">back</th>
+<th align="center">front</th>
+<th align="center">back</th>
+<th align="center">right</th>
+<th align="center">left</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">7</td>
+<td align="center">ctrl + 7</td>
+<td align="center">1</td>
+<td align="center">ctrl + 1</td>
+<td align="center">3</td>
+<td align="center">ctrl + 3</td>
+</tr>
+</tbody></table>
+<ul>
+<li><font color=" #dd0000 "><code>5</code></font>: 切换正交/透视</li>
+<li><font color=" #dd0000 "><code>[2,4,6,8]</code></font>: 旋转视图</li>
+<li><font color=" #dd0000 "><code>Shift + 7</code></font>: 切换至以当前选中激活面的法线方向为视线方向的视图</li>
+<li><font color=" #dd0000 "><code>M</code></font>: 移动对象到指定collection</li>
+<li><font color=" #dd0000 "><code>[1,2,3,...]</code></font> ( object mode) : 查看指定scene collection内容<ul>
+<li><font color=" #dd0000 "><code>Shift + [1,2,3,...]</code></font>: 同时查看指定collection内容</li>
+<li><font color=" #dd0000 "><code>H</code></font>: 隐藏选定对象</li>
+<li><font color=" #dd0000 "><code>Shift + H</code></font>: 仅显示选定对象</li>
+<li><font color=" #dd0000 "><code>Alt + H</code></font>: 取消隐藏</li>
+<li>鼠标停留在场景集合窗口内，按<font color=" #dd0000 "><code>Alt + H</code></font>: 显示所有scence collection内容</li>
+<li><font color=" #dd0000 "><code>Ctrl + H</code></font>: 控制需要显示的层级</li>
+<li><font color=" #dd0000 "><code>[+/-]</code></font>:  展开/收缩 场景集合文件目录</li>
+</ul>
+</li>
+<li><font color=" #dd0000 "><code>/</code></font>: 局部/全局切换<ul>
+<li><font color=" #dd0000 "><code>Z</code></font>: 着色方式</li>
+</ul>
+</li>
+<li><font color=" #dd0000 "><code>Shift + E + n</code></font>: 边线折痕<ul>
+<li><font color=" #dd0000 "><code>Shift + E</code></font>: Edge crease</li>
+</ul>
+</li>
+</ul>
+<h2 id="物体基本操作"><a href="#物体基本操作" class="headerlink" title="物体基本操作:"></a><strong>物体基本操作</strong>:</h2><ul>
+<li><font color=" #dd0000 "><code>W</code></font>:  [物体、点、线、面、…] 对应上下文菜单</li>
+<li><font color=" #dd0000 "><code>Shift + A</code></font>:创建对象</li>
+<li><font color=" #dd0000 ">F9</font>  :  微调参数</li>
+<li><font color=" #dd0000 "><code>Shift + D</code></font>: 复制对象<ul>
+<li><font color=" #dd0000 "><code>Alt + D</code></font>: 关联复制 (物体模式下)</li>
+</ul>
+</li>
+<li><font color=" #dd0000 "><code>Ctrl + M</code></font>: 按选定轴向<strong>镜像</strong></li>
+<li><font color=" #dd0000 "><code>Ctrl + J</code></font>: 合并对象</li>
+<li><font color=" #dd0000 "><code>P</code></font>:分离对象</li>
+<li><font color=" #dd0000 "><code>Ctrl + P</code></font>: 设置父级<ul>
+<li><font color=" #dd0000 "><code>Shift + S</code></font>: 对齐</li>
+<li><font color=" #dd0000 "><code>Shift + R</code></font>  : Repeat previous step</li>
+<li><font color=" #dd0000 "><code>G/R/S</code></font>: 变换: [移动 / 旋转 / 缩放]<ul>
+<li><font color=" #dd0000 "><code>G G</code></font>:  滑移——受限制的移动线或面<ul>
+<li>GG + C : 约束下滑移u</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><font color=" #dd0000 "><code>Alt + [G/R/...]</code></font>: 复位变换</li>
+<li><font color=" #dd0000 "><code>&lt;</code></font>: 修改变换坐标系<ul>
+<li><font color=" #dd0000 "><code>+</code></font>: 可以设置[点, 线, 面]的法向基准的坐标系作为变换坐标系</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><font color=" #dd0000 "><code>&gt;</code></font>: 修改轴心点</li>
+<li><font color=" #dd0000 "><code>Alt + N</code></font>: 法向菜单</li>
+<li><font color=" #dd0000 "><code>F2</code></font>: 重命名</li>
+<li><em>选取操作:*</em></li>
+</ul>
+<hr>
+<ul>
+<li><font color=" #dd0000 "><code>Ctrl + [+/-]</code></font>: 扩展/缩小选区</li>
+<li><font color=" #dd0000 "><code>Shift + S</code></font>: 选择相似对象</li>
+<li><font color=" #dd0000 "><code>Alt</code></font>+Selecting: 循环选择<ul>
+<li><font color=" #dd0000 "><code>Ctrl + Alt</code></font>+Selecting : 并排选择</li>
+</ul>
+</li>
+<li><font color=" #dd0000 "><code>B</code></font>: 框选</li>
+<li><font color=" #dd0000 "><code>C</code></font>: 刷选<ul>
+<li>按住中键可以减选</li>
+</ul>
+</li>
+<li>Select ion+<font color=" #dd0000 "><code>L</code></font>: 扩展选区至整个拓扑对象</li>
+<li><font color=" #dd0000 "><code>Ctrl + I</code></font> : 反选</li>
+<li>选择一个点，再 <code>ctrl</code> 选择另一个点：自动选择最短路径</li>
+<li>选择一个物体，double* <font color="dd0000"> <code>A</code></font>: 以选中物体为激活对象的集合<br><strong>点线面、变换</strong>:</li>
+</ul>
+<hr>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="center">点</th>
+<th align="center">线</th>
+<th align="center">面</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">选择</td>
+<td align="center"><strong><em>1</em></strong></td>
+<td align="center"><strong><em>2</em></strong></td>
+<td align="center"><strong><em>3</em></strong></td>
+</tr>
+<tr>
+<td align="left">加/减选</td>
+<td align="center"><strong>Shift + 1</strong></td>
+<td align="center"><strong>Shift + 2</strong></td>
+<td align="center"><strong>Shift + 3</strong></td>
+</tr>
+<tr>
+<td align="left">元素对应命令</td>
+<td align="center"><strong>Ctrl + V</strong></td>
+<td align="center"><strong>Ctrl + E</strong></td>
+<td align="center"><strong>Ctrl + F</strong></td>
+</tr>
+</tbody></table>
+<ul>
+<li><font color=" #dd0000 "><code>X</code></font>: delete<ul>
+<li><font color=" #dd0000 "><code>Ctrl + X</code></font>: 融并选区</li>
+</ul>
+</li>
+<li><font color=" #dd0000 "><code>Ctrl + B</code></font>:  倒角 ( edge )<ul>
+<li><font color=" #dd0000 "><code>Shift + Ctrl + B</code></font>:   Bevel ( vertex-only )</li>
+</ul>
+</li>
+<li><font color=" #dd0000 "><code>Ctrl + R</code></font>: 环切</li>
+<li><font color=" #dd0000 "><code>Alt + M</code></font> : 焊接 ( merge )</li>
+<li><font color=" #dd0000 "><code>I</code></font>: 内插面</li>
+<li><font color=" #dd0000 "><code>K</code></font>: 裁剪?</li>
+<li>连接之<font color=" #dd0000 "><code>F</code></font> &amp; <font color=" #dd0000 "><code>J</code></font> :<ul>
+<li><font color=" #dd0000 "><code>F</code></font>: 元连接  ( <em>导轨情景下可以按住 <code>F</code> 使其按方向顺次连接</em></li>
+<li><font color=" #dd0000 "><code>J</code> </font> : 二阶连接，在基础上进一步按选择方向连接</li>
+</ul>
+</li>
+<li><font color=" #dd0000 "><code>S + [x, y, z] + 0</code></font>: 元素沿选择轴向对齐<ul>
+<li><strong>对齐基准</strong>的选择：按<font color=" #dd0000 "><code>&gt;</code></font>选择对齐基准</li>
+</ul>
+</li>
+<li><font color=" #dd0000 "><code>Alt + E</code></font>: 按选定方式挤出(法向挤出, etc)</li>
+<li><font color=" #dd0000 "><code>Alt + S</code></font>:  法向缩放<ul>
+<li>按 <code>S</code> 开启均等缩放、按住 <code>Alt</code> 开启均等缩放</li>
+</ul>
+</li>
+<li><font color=" #dd0000 "><code>Shift + Alt + S</code></font>: 球形化</li>
+<li><font color=" #dd0000 "><code>O</code></font> : 开启/关闭衰减编辑</li>
+<li><font color=" #dd0000 "><code>V</code></font> : 断离<ul>
+<li><font color=" #dd0000 "><code>Alt + V</code></font>: 撕开选中的点/线 并填充 3d</li>
+<li><font color=" #dd0000 "><code>Alt + D</code></font>: 断离并延长 2d</li>
+</ul>
+</li>
+<li><font color=" #dd0000 "><code>Y</code></font>:  从物体上拆分选中的元素</li>
+<li><font color=" #dd0000 "><code>Shift + V</code></font>  :  沿网格滑移顶点<ul>
+<li>= <code>G G</code></li>
+</ul>
+</li>
+<li><font color=" #dd0000 "><code>Shift + Tab</code></font>: 开关吸附工具<ul>
+<li>按 <font color=" #dd0000 "><code>Ctrl</code></font>  :  暂时开关吸附工具</li>
+<li><font color=" #dd0000 "><code>N</code></font>  活动工具中开启 <font color=" #dd0000 "><code>自动合并</code></font>  则阀值内吸附的元素自动合并</li>
+</ul>
+</li>
+<li><font color=" #dd0000 "><code>Shift + N</code></font>: 重新计算法线</li>
+</ul>
+<h2 id="Shading"><a href="#Shading" class="headerlink" title="Shading"></a>Shading</h2><hr>
+<ul>
+<li><font color=" #dd0000 "><code>Shift + A</code></font>: 新建</li>
+<li><font color=" #dd0000 "><code>Shift + D</code></font>: 复制</li>
+<li><font color=" #dd0000 "><code>Shift + Right_click</code></font>: 添加节点</li>
+</ul>
+<h2 id="Camera-setting-amp-Rendering"><a href="#Camera-setting-amp-Rendering" class="headerlink" title="Camera setting &amp; Rendering"></a>Camera setting &amp; Rendering</h2><hr>
+<ul>
+<li><font color=" #dd0000 "><code>F12</code></font>:  查看渲染结果</li>
+<li><font color=" #dd0000 "><code>Shift + S </code></font>: save the rendering image</li>
+<li><font color=" #dd0000 "><code>0</code></font>: (toogle) 在视图中查看相机看到的内容</li>
+<li><font color=" #dd0000 "><code>Ctrl  + Shift + 0</code></font>: 于当前视图定位摄像机</li>
+<li><font color=" #dd0000 "><code>Shift + `</code></font>: Navigation, 第一视角操作</li>
+<li><font color=" #dd0000 "><code>Contrl + Shift + left-click</code></font>:preview the effect of the node</li>
+<li><font color=" #dd0000 "><code>Contrl + G</code></font>: Build a group</li>
+<li><font color=" #dd0000 "><code>Tab</code></font>: unfold the group</li>
+</ul>
+<h2 id="Sculpting"><a href="#Sculpting" class="headerlink" title="Sculpting"></a>Sculpting</h2><hr>
+<ul>
+<li><font color=" #dd0000 "><code>F</code></font>:  调整画笔大小</li>
+<li><font color=" #dd0000 "><code>Shift + F</code></font>:  调整画笔强度</li>
+</ul>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">lain</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://xlciela.github.io/2020/02/01/blender-shortcuts/">http://xlciela.github.io/2020/02/01/blender-shortcuts/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Blender/">Blender</a><a class="post-meta__tags" href="/tags/3D-Art/">3D Art</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/07/21/6VhnoiZTyEzO3qK.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/07/09/%E7%BB%98%E7%94%BB%E2%80%94%E2%80%94%E7%BB%BC%E5%90%88%E4%B8%8E%E5%88%86%E6%9E%90%20%20%E6%8A%BD%E8%B1%A1%E4%B8%8E%E5%85%B7%E4%BD%93/"><img class="prev-cover" data-src="https://i.loli.net/2020/07/09/NM1kOpvD65ylcVI.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">绘画——综合与分析 | 抽象与具体</div></div></a></div><div class="next-post pull-right"><a href="/2019/01/09/2019-toDO-LIST/"><img class="next-cover" data-src="https://i.loli.net/2019/11/24/OTZhpUX9qvEgkn2.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">我的年度计划@2019</div></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var requestSetting = function (from,set) {
+  var from = from
+  var setting = set.split(',').filter(function(item){
+  return from.indexOf(item) > -1
+  });
+  setting = setting.length == 0 ? from :setting;
+  return setting
+}
+
+var guestInfo = requestSetting(['nick','mail','link'],'nick,mail,link')
+var requiredFields = requestSetting(['nick','mail'],'nick,mail')
+
+window.valine = new Valine({
+  el:'#vcomment',
+  appId: 'XBs3WMes4VDy3sNOUVKYLzxC-gzGzoHsz',
+  appKey: 'P5L3VqcGwHWCt00FNleJLuvI',
+  placeholder: 'Please leave your footprints',
+  avatar: 'monsterid',
+  meta: guestInfo,
+  pageSize: '10',
+  lang: 'en',
+  recordIP: false,
+  serverURLs: '',
+  emojiCDN: '',
+  emojiMaps: "",
+  enableQQ: false,
+  requiredFields: requiredFields
+});</script></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By lain</div><div class="framework-info"><span>Driven </span><a target="_blank" rel="noopener" href="https://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div><div class="footer_custom_text">The brain —— is wider than the sky</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button id="readmode" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font_plus" title="Increase Font Size"><i class="fas fa-plus"></i></button><button id="font_minus" title="Decrease Font Size"><i class="fas fa-minus"></i></button><button class="translate_chn_to_cht" id="translateLink" title="Switch Between Traditional Chinese And Simplified Chinese">简</button><button id="darkmode" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="Setting"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="scroll_to_comment fas fa-comments"></i></a><button class="close" id="mobile-toc-button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src= "/js/myjs.js"></script></body></html>
