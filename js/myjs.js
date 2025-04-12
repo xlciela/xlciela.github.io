@@ -1,4 +1,4 @@
-<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js"></script>// 侧栏分类卡片隐藏
+// 侧栏分类卡片隐藏
 
 var card_category_list = document.getElementsByClassName(
     "card-category-list child"
@@ -61,7 +61,7 @@ for (var i = 0; i < card_category_list.length; i++) {
       var oLi =
         '<li><a  href=" ' +
         item.a +
-        'target="_blank" "><img src= "/img/loading.gif" data-src=" ' +
+        'target="_blank" "><img src=" ' +
         item.img +
         ' "></a></li>';
       oUl.append(oLi);
